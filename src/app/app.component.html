@@ -1,0 +1,33 @@
+<mat-drawer-container class="mat-drawer-container" autosize>
+
+  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+    <div class="logo-container">
+      <img routerLink="/" class="logo" src="../assets/img/join-logo.png" alt="">
+    </div>
+
+    <ul class="menu-items">
+      <li routerLink="/summary"><img src="../assets/img/icons/summary.png" alt=""> Summary</li>
+      <li routerLink="/board"><img src="../assets/img/icons/board.png" alt=""> Board</li>
+      <li routerLink="/addTask"><img src="../assets/img/icons/add_task.png" alt=""> Add Task</li>
+      <li routerLink="/contacts"><img src="../assets/img/icons/contacts.png" alt=""> Contacts</li>
+      <li routerLink="/legalNotice"><img src="../assets/img/icons/legal_notice.png" alt="">Legal Notice</li>
+    </ul>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <p>
+      <mat-toolbar class="toolbar">
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
+        <span>Kanban Project Management Tool</span>
+      </mat-toolbar>
+    </p>
+
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</mat-drawer-container>
