@@ -28,7 +28,6 @@
             margin: 1rem 0rem;
             height: 46px;
             display: flex;
-            // justify-content: center;
             align-items: center;
             padding: 8px 53px;
 
@@ -46,6 +45,10 @@
                 object-fit: cover;
                 width: 22px;
             }
+        }
+
+        .link-highlight {
+            background-color: #091931;
         }
     }
 
