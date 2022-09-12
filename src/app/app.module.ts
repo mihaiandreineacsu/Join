@@ -13,6 +13,12 @@ import { BoardComponent } from './board/board.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,7 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     BoardComponent,
     AddTaskComponent,
     ContactsComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,14 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonToggleModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

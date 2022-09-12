@@ -1,0 +1,90 @@
+.inputfield-container {
+    display: flex;
+    width: 100%;
+
+    .inputfields-left {
+        padding-right: 2rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .inputfields-right {
+        padding-left: 2rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        .prio-button-group {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: 150px;
+                height: 55px;
+
+                &:hover {
+                    background-color: orange;
+                }
+
+                &:first-child {
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+
+                &:last-child {
+                    &:hover {
+                        background-color: green;
+                    }
+                }
+            }
+
+            .activeRed {
+                background-color: red;
+            }
+
+            mat-icon {
+                margin-left: .5rem;
+            }
+
+            span {
+                margin-left: .5rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.main-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    gap: 10px;
+
+    button {
+        height: 61px;
+        width: 136px;
+        border: 1px solid #2A3647;
+
+        &:hover {
+            border-color: #29ABE2;
+            color: #29ABE2;
+        }
+
+        &:last-child {
+            background-color: #2A3647;
+            color: white;
+            width: 177px;
+
+            &:hover {
+                background-color: #29ABE2;
+            }
+        }
+
+        mat-icon {
+            margin-left: .5rem;
+        }
+    }
+}

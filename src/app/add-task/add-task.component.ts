@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -11,5 +12,8 @@ export class AddTaskComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  toppings = new FormControl('');
+  userList: string[] = ['You', 'Kristian Huptas', 'Delong Liang'];
 
 }

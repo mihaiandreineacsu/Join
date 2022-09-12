@@ -1,1 +1,63 @@
-<p>add-task works!</p>
+<h1>Add Task</h1>
+
+<div class="inputfield-container">
+
+    <div class="inputfields-left">
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Enter a title">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Enter a Description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select placeholder="Select task category">
+                <mat-option value="one">New category</mat-option>
+                <mat-option value="two">Sales</mat-option>
+                <mat-option value="three">Backoffice</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Assigned to</mat-label>
+            <mat-select multiple>
+                <mat-option *ngFor="let user of userList" [value]="user">{{user}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="inputfields-right">
+        <mat-form-field appearance="outline">
+            <mat-label>Due date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="prio-button-group">
+            <button mat-raised-button>
+                Urgent<mat-icon>keyboard_double_arrow_up</mat-icon>
+            </button>
+            <button mat-raised-button>
+                Medium<span>=</span>
+            </button>
+            <button mat-raised-button>
+                Low<mat-icon>keyboard_double_arrow_down</mat-icon>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div class="main-button-container">
+    <button mat-raised-button>
+        Clear<mat-icon>close</mat-icon>
+    </button>
+    <button mat-raised-button>
+        Create Task<mat-icon>done</mat-icon>
+    </button>
+</div>
