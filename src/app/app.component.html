@@ -2,25 +2,24 @@
 
   <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
     <div class="logo-container">
-      <img [class.link-highlight]="summeryActive" (click)="activateSummery()" routerLink="/" class="logo"
-        src="../assets/img/join-logo.png" alt="">
+      <img routerLinkActive="link-highlight" routerLink="summary" class="logo" src="../assets/img/join-logo.png" alt="">
     </div>
 
     <ul class="menu-items">
-      <li [class.link-highlight]="summeryActive" (click)="activateSummery()" routerLink="/summary"><img
-          src="../assets/img/icons/summary.png" alt="">Summary</li>
+      <li routerLinkActive="link-highlight" routerLink="/summary"><img src="../assets/img/icons/summary.png"
+          alt="">Summary</li>
 
-      <li [class.link-highlight]="boardActive" (click)="activateBoard()" routerLink="/board"><img
-          src="../assets/img/icons/board.png" alt="">Board</li>
+      <li routerLinkActive="link-highlight" routerLink="/board"><img src="../assets/img/icons/board.png" alt="">Board
+      </li>
 
-      <li [class.link-highlight]="addTaskActive" (click)="activateAddTask()" routerLink="/addTask"><img
-          src="../assets/img/icons/add_task.png" alt=""> Add Task</li>
+      <li routerLinkActive="link-highlight" routerLink="/addTask"><img src="../assets/img/icons/add_task.png" alt="">
+        Add Task</li>
 
-      <li [class.link-highlight]="contactsActive" (click)="activateContacts()" routerLink="/contacts"><img
-          src="../assets/img/icons/contacts.png" alt=""> Contacts</li>
+      <li routerLinkActive="link-highlight" routerLink="/contacts"><img src="../assets/img/icons/contacts.png" alt="">
+        Contacts</li>
 
-      <li [class.link-highlight]="legalNoticeActive" (click)="activateLegalNotice()" routerLink="/legalNotice"><img
-          src="../assets/img/icons/legal_notice.png" alt="">Legal Notice</li>
+      <li routerLinkActive="link-highlight" routerLink="/legalNotice"><img src="../assets/img/icons/legal_notice.png"
+          alt="">Legal Notice</li>
     </ul>
   </mat-drawer>
 
