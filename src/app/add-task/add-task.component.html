@@ -5,12 +5,12 @@
     <div class="inputfields-left">
         <mat-form-field appearance="outline">
             <mat-label>Title</mat-label>
-            <input matInput placeholder="Enter a title">
+            <input [(ngModel)]="task.title" matInput placeholder="Enter a title">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Description</mat-label>
-            <textarea matInput placeholder="Enter a Description"></textarea>
+            <textarea [(ngModel)]="task.description" matInput placeholder="Enter a Description"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -33,7 +33,7 @@
     <div class="inputfields-right">
         <mat-form-field appearance="outline">
             <mat-label>Due date</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input [(ngModel)]="task.dueDate" matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -57,7 +57,7 @@
     <button mat-raised-button>
         Clear<mat-icon>close</mat-icon>
     </button>
-    <button mat-raised-button>
+    <button mat-raised-button (click)="createTask()">
         Create Task<mat-icon>done</mat-icon>
     </button>
 </div>
